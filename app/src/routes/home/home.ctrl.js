@@ -19,10 +19,11 @@ const users = {
 const process = {
     login: (req,res) => {
         const id = req.body.id,
-        psword = req.body.pasword;
+        psword = req.body.psword;
 
         if (users.id.includes(id)) {
             const idx = users.id.indexOf(id);
+            console.log(users.psword[idx],psword)
             if(users.psword[idx]=== psword) {
                 return res.json({
                     success:true,
